@@ -9,7 +9,7 @@
     <!--Style Css-->
     <link rel="stylesheet" href="style/style.css">
 
-   
+
     <!-- -------Style Fonts------- -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,9 @@
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    
+    <!-- ------- Materialize ------- -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
@@ -43,7 +45,7 @@
 
     <div class="footer-menu">
 
-        <a href=""><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/gianthis.dev/"><i class="fab fa-instagram"></i></a>
         <a href=""><i class="fab fa-facebook-f"></i></a>
     </div>
 </div>
@@ -66,17 +68,108 @@
 
     </div>
   
-    <div class="services-list">
+    <div class="services-list reveal">
         <a class="link link--services" href="#" data-letters="Sito vetrina">Sito vetrina</a>
         <a class="link link--services" href="#" data-letters="E-commerce">E-commerce</a>
     </div>
 </div>
 
+<!-- ---------- Portfolio gallery -------- -->
+    <div class="portfolio">
+        <div class="portfolio-title reveal" >
+            <h1> I NOSTRI LAVORI </h1>
+            <span> </span>
+        </div>
+        <div class="carousel reveal">
+            <a target="blank" href="http://www.giuseppemaranodesign.com/" class="carousel-item"><img src="media/carousel-img/Giumar.png" alt=""></a>
+            <a target="blank" href="https://www.anthisinformatica.it/" class="carousel-item"><img src="media/carousel-img/anthis.png" alt=""></a>
+            <a target="blank" href="http://www.giuseppemaranodesign.com/" class="carousel-item"><img src="media/carousel-img/autoscuola.png" alt=""></a>
 
+        </div>
+</div>
+
+<!-- ---------- Form contatti -------- -->
+<div class="contatti" id="contact">
+    <div class="contatti-title reveal ">
+        <h1>CONTATTACI</h1>
+        <span></span>
+    </div>
+
+    <form class="form-contatti reveal" name="formmail" method="post" action="contatti.php" onsubmit="controlloForm()">
+
+        <input type="hidden" name="successo" value="success.html">
+
+        <div class="form-row-contatti">
+            <input type="text" id="nome" name="nome" placeholder="Nome">
+            <input type="text" id="cognome" name="cognome" placeholder="Cognome">
+        </div>
+
+        <div class="form-row-contatti">
+            <input type="text" id="email" name="email" placeholder="Email">
+            <input type="text" id="tel" name="tel" placeholder="Numero di telefono">
+        </div>
+        <div class="form-row-contatti">
+            <textarea id="msg" name="msg" cols="20" rows="10" placeholder="Scrivi qui il tuo messaggio"></textarea>
+
+        </div>
+
+        <div class="form-contatti-button">
+            <input type="submit" value="Invia">
+        </div>
+    </form>
+</div>
+
+<!-- ----------- Footer ----------- -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-img">
+            <img src="media/logo/logo_gianthis.png" alt="">
+        </div>
+        <div class="footer-column">
+            <h1>INFO</h1>
+            <a href="">Contatti</a>
+            <a href="">Chi siamo</a>
+            <a href="">Privacy & Policy</a>
+        </div>
+        <div class="footer-column">
+            <h1>CONTATTI</h1>
+            <p>Gianthis</p>
+            <p>Email: gianthis.dev@gmail.com</p>
+        </div>  
+    </div>
+    <div class="footer-social">
+        <a href="https://www.instagram.com/gianthis.dev/"><i class="fab fa-instagram"></i></a>
+        <a href=""><i class="fab fa-facebook-f"></i></a>
+    </div>
+</footer>
 
 <!-- ------- script hamburger ------- -->
 <script src="style/js/hamburger.js"> </script>
 
+<!-- ------- jquery ------- -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- ------- Materialize for carousel ------- -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha512-NiWqa2rceHnN3Z5j6mSAvbwwg3tiwVNxiAQaaSMSXnRRDh5C2mk/+sKQRw8qjV1vN4nf8iK2a0b048PnHbyx+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.carousel').carousel({
+                indicators: false
+            });
+        });
+    </script>
+
+<!-- ------- Script form contatti ------- -->
+<script src="style/js/form-contatti.js"></script>
+
+<!-- ------- Script animazioni scroll ------- -->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script>    
+ScrollReveal().reveal('.reveal', { distance: '50px',  duration: 700 , easing:'ease-in-out' , delay: 100  });
+</script>
+
+
 </body>
 </html>

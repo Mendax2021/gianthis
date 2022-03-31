@@ -239,8 +239,8 @@ body{
 /*--  Services video  --*/
 
 .services-video img{
-   width: 600px; 
-   height: 500px;
+   width: 710px; 
+   height: 620px;
    z-index: 2; 
    animation: bubble 2s infinite ease-in-out;
 }
@@ -249,8 +249,8 @@ body{
     
 }
 .img-video img{
-    width: 375px;
-    height: 270px;
+    width: 450px;
+    height: 320px;
     animation: bubble 2s infinite ease-in-out;
 
 }

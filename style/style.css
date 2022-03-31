@@ -3,6 +3,7 @@ body{
     margin: 0;
     
     font-family: 'Lato', sans-serif;
+
    
 }
 
@@ -168,15 +169,43 @@ body{
 
 .hero{
     width: 100%;
+    height: 100%;
     
 }
 
 .hero video{
     width: 100%;
     filter: brightness(50%);
+    
+
    
 }
 
+.hero-text{
+    position: absolute;
+    width: 800px;
+    z-index: 3;
+    color: #fff;
+    padding-top: 30px;
+    left: 50%;
+ 
+}
+
+.hero-text h1{
+    font-size: 160px;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 0.9em ;   
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.hero-text h1::after{
+
+        content: ".";
+        color: #3F16E0;
+        font-weight: 700;
+        font-family: 'Roboto Condensed', sans-serif;
+
+    }
 
 /* ------- Services ------- */
 

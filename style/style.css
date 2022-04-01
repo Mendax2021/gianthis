@@ -103,7 +103,7 @@ body{
     overflow-x: hidden;
     position: fixed;
     
-    z-index: 1;
+    z-index: 2;
 
     background: rgba( 0, 0, 0, 0.85 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -169,12 +169,15 @@ body{
 
 .hero{
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    overflow: hidden;
     
 }
 
 .hero video{
-    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
     filter: brightness(50%);
     
 
@@ -183,29 +186,54 @@ body{
 
 .hero-text{
     position: absolute;
-    width: 800px;
-    z-index: 3;
+    width: 700px;
+    z-index: 1;
     color: #fff;
-    padding-top: 30px;
+    padding-top: 40px;
     left: 50%;
- 
 }
 
 .hero-text h1{
-    font-size: 160px;
+    font-size: 150px;
     text-transform: uppercase;
     font-weight: 700;
     line-height: 0.9em ;   
     font-family: 'Roboto Condensed', sans-serif;
 }
+.hero-text .first-text::after{
+    content: ' Sito Web';
+    color: #3F16E0;
+    font-weight: 700;
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
 .hero-text h1::after{
 
-        content: ".";
-        color: #3F16E0;
-        font-weight: 700;
-        font-family: 'Roboto Condensed', sans-serif;
+    content: ".";
+    color: #3F16E0;
+    font-weight: 700;
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+@media(max-width: 768px){
+
+    .hero-text{
+        left: 0;
+        width: 100%;
+        padding-top: 100px;
+    }
+
+    .hero-text h1{
+        font-size: 65px;
+        line-height: 1.2em; 
+    }
+
+    .hero-text .last-text{
+        margin-top: -15px;
 
     }
+}
 
 /* ------- Services ------- */
 
@@ -224,7 +252,7 @@ body{
     background-image: url(../media/blob.svg);
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: 600PX ;
+    background-size: 600px ;
 
    
 }
@@ -236,12 +264,14 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+
 /*--  Services video  --*/
 
 .services-video img{
    width: 710px; 
    height: 620px;
-   z-index: 2; 
+   z-index: 1; 
    animation: bubble 2s infinite ease-in-out;
 }
 .img-video{
@@ -280,7 +310,6 @@ body{
 	color: #000;
 }
 
-
 .link--services:hover {
 	color: #363837;
 }
@@ -316,6 +345,46 @@ body{
 
 .link--services:hover::before {
 	width: 100%;
+}
+
+@media(max-width: 768px){
+
+/* ------- Services responsive ------- */
+
+.services{
+    flex-direction: column;
+}
+
+
+/*--  Services video responsive --*/
+
+.services-video{
+    width: 100%;
+    background-size: 350px ;
+}
+
+.services-video img{
+    width: 410px; 
+    height: 358px;
+}
+
+.img-video img{
+    width: 260px;
+    height: 185px;
+}
+
+/*--  Services text list  responsive --*/
+
+.services-list{
+    width: 100%;
+    padding-top: 50px;
+
+}
+
+.link {
+	font-size: 50px;
+}
+
 }
 
 

@@ -110,7 +110,6 @@ body{
     backdrop-filter: blur( 20px );
     -webkit-backdrop-filter: blur( 20px );
     
-
 }
 
 .menu-list{
@@ -143,6 +142,13 @@ body{
 
 }
 
+@media(max-width:768px){
+    .menu-list{
+        font-size: 40px;
+
+    }
+
+}
 
 /*------- footer-Menu ---------*/
 .footer-menu{
@@ -179,9 +185,7 @@ body{
     min-height: 100%;
     object-fit: cover;
     filter: brightness(50%);
-    
 
-   
 }
 
 .hero-text{
@@ -266,7 +270,7 @@ body{
 }
 
 
-/*--  Services video  --*/
+/*-------  Services video  -------*/
 
 .services-video img{
    width: 710px; 
@@ -290,7 +294,7 @@ body{
     100%{ transform: translateY(0px);}
 }
 
-/*--  Services text list  --*/
+/*-------  Services text list  -------*/
 
 .link {
 	outline: none;
@@ -356,7 +360,7 @@ body{
 }
 
 
-/*--  Services video responsive --*/
+/*-------  Services video responsive -------*/
 
 .services-video{
     width: 100%;
@@ -373,7 +377,7 @@ body{
     height: 185px;
 }
 
-/*--  Services text list  responsive --*/
+/*------- Services text list  responsive -------*/
 
 .services-list{
     width: 100%;
@@ -388,7 +392,7 @@ body{
 }
 
 
-/*--  Portfolio gallery  --*/
+/*-------  Portfolio gallery  -------*/
 
 .portfolio{
     display: flex;
@@ -400,15 +404,16 @@ body{
 }
 
 .portfolio-title{
-    position: relative;
-    
+    position: relative;    
 }
+
 .portfolio-title h1{
     color: white;
     font-weight: 800;
     line-height: 40px;
 
 }
+
 .portfolio-title span{
     display: block;
     height: 5px;
@@ -420,18 +425,124 @@ body{
     border-radius: 10px;
 }
 
-
-.carousel-item{
-    width: 500px !important;
-    height: 300px !important;
-    margin-bottom: 50px !important;
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
 }
-.carousel-item img{
-    height: 500px !important;
+  
+/* Hide the images by default */
+.mySlides {
+    display: none;
+    position: relative;
+    border-radius: 10px;
+
 }
 
+.mySlides-img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
 
-/* Form Contatti */
+}
+.mySlides img{
+    border-radius: 10px;
+    object-fit: cover;
+    height: 100%;
+}
+
+.work-title{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba( 0, 0, 0, 0.5 );
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    border-radius: 10px;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom:40px ;
+}
+
+.work-title h2{
+    font-weight: 700;
+    color: #fff;
+    font-size: 30px;
+}
+
+.work-title span{
+    height: 5px;
+    background: #3F16E0;
+    width: 30%;
+    border-radius: 5px;
+    display: block;
+}
+
+.work-title:hover{
+    opacity: 1;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+      color: #fff;
+    background-color: #212121;
+  }
+
+
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+
+@media(max-width:768px){
+
+    .portfolio{
+        justify-content: flex-start;
+        height: auto;
+        padding-top: 50px;
+    }
+
+    .portfolio-title h1{
+        font-size: 40px;
+    }
+}
+
+/* ------- Form Contatti ------- */
 
 .contatti{
     width: 100% ;
@@ -442,16 +553,19 @@ body{
     flex-direction: column;
     background: #212121;
 }
+
 .contatti-title{
     line-height: 10px;
     width: fit-content;
 }
+
 .contatti-title h1{
     color: #fff;
     font-weight: 800;
 
 
 }
+
 .contatti-title span{
     height: 5px;
     width: 100px;
@@ -532,6 +646,22 @@ body{
     background: #3F16E0;
 }
 
+@media(max-width:768px){
+
+    .contatti{
+        padding-top: 50px;
+    }
+
+    .contatti-title h1{
+        font-size: 40px;
+    }
+
+    .form-row-contatti{
+       flex-direction: column;
+    }
+}
+
+
 /* -------- Footer --------*/
 .footer{
 width:  100%;
@@ -543,14 +673,12 @@ flex-direction: column;
 -moz-box-shadow: 0px -7px 17px -1px #171617;
 -o-box-shadow: 0px -7px 17px -1px #171617;
 box-shadow: 0px -7px 17px -1px #171617;
-
 }
 
 .footer-content{
     width: 100%;
     height: 75%;
     display: flex;
-
 }
 
 .footer-img{
@@ -568,6 +696,7 @@ box-shadow: 0px -7px 17px -1px #171617;
     display: flex;
     flex-direction: column;
 }
+
 .footer-column h1{
     color: #bfbfba;
     font-size: 20px;
@@ -597,6 +726,45 @@ box-shadow: 0px -7px 17px -1px #171617;
     align-items: center;
 }
 
+@media(max-width:768px){
+
+    .footer{
+        height: auto;
+        align-items: center;
+    }
+
+    .footer h1{
+        font-size: 20px;
+    }
+
+    .footer a{
+        font-size: 18px;
+    }
+    
+    .footer p{
+        font-size: 18px;
+    }
+
+    .footer-content{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .footer-column{
+        align-items: center;
+        width: 100%;
+    }
+    
+    .footer-img{
+        width: 100%;
+        align-items: center;
+    }
+    
+    .footer-img img{
+        height: 128px;
+        width: 170px;
+    }
+}
 
 *,
 *:before,

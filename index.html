@@ -21,8 +21,6 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-    <!-- ------- Materialize ------- -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
@@ -88,12 +86,52 @@
             <h1> I NOSTRI LAVORI </h1>
             <span> </span>
         </div>
-        <div class="carousel reveal">
-            <a target="blank" href="http://www.giuseppemaranodesign.com/" class="carousel-item"><img src="media/carousel-img/Giumar.png" alt=""></a>
-            <a target="blank" href="https://www.anthisinformatica.it/" class="carousel-item"><img src="media/carousel-img/anthis.png" alt=""></a>
-            <a target="blank" href="http://www.giuseppemaranodesign.com/" class="carousel-item"><img src="media/carousel-img/autoscuola.png" alt=""></a>
+        
+        <!-- Slideshow container -->
+    <div class="slideshow-container">
 
+    <div class="mySlides fade">
+        <div class="mySlides-img">
+        <img src="media/carousel-img/anthis.png" style="width:100%">
         </div>
+        <a href="https://www.anthisinformatica.it/" target="blank">
+            <div class="work-title">
+                <h2>Anthis Informatica</h2>
+                <span></span>
+                
+            </div>
+        </a>
+    </div>
+  
+    <div class="mySlides fade">
+        <div class="mySlides-img">
+        <img src="media/carousel-img/autoscuola.png" style="width:100%">
+        </div>
+        <a href="https://www.anthisinformatica.it/" target="blank">
+            <div class="work-title">
+                <h2>Autoscuola Alfe</h2>
+                <span></span>
+            </div>
+        </a>
+    </div>
+  
+    <div class="mySlides fade">
+        <div class="mySlides-img">
+        <img src="media/carousel-img/Giumar.png" style="width:100%">
+        </div>
+        <a href="https://www.anthisinformatica.it/" target="blank">
+            <div class="work-title">
+                <h2>GiuseppeMarano Boutique</h2>
+                <span></span>
+            </div>
+        </a>
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  
 </div>
 
 <!-- ---------- Form contatti -------- -->
@@ -178,6 +216,8 @@
 ScrollReveal().reveal('.reveal', { distance: '50px',  duration: 700 , easing:'ease-in-out' , delay: 100  });
 </script>
 
+<!-- ------- Script carousel ------- -->
+<script src="style/js/carousel.js"></script>
 
 </body>
 </html>

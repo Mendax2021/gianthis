@@ -193,8 +193,8 @@ body{
     width: 700px;
     z-index: 1;
     color: #fff;
-    padding-top: 40px;
     left: 50%;
+
 }
 
 .hero-text h1{
@@ -203,12 +203,14 @@ body{
     font-weight: 700;
     line-height: 0.9em ;   
     font-family: 'Roboto Condensed', sans-serif;
+    margin-bottom: 0;
 }
 .hero-text .first-text::after{
     content: ' Sito Web';
     color: #3F16E0;
     font-weight: 700;
     font-family: 'Roboto Condensed', sans-serif;
+
 
 }
 .hero-text h1::after{
@@ -218,6 +220,9 @@ body{
     font-weight: 700;
     font-family: 'Roboto Condensed', sans-serif;
 
+}
+.last-text{
+    margin:  0px;    
 }
 
 @media(max-width: 768px){
@@ -398,19 +403,22 @@ body{
     display: flex;
     flex-direction: column;
     background-color: #212121;
-    height: 100vh;
+    height: 80vh;
     justify-content: center;
     align-items: center;
+    padding-top: 90px;
 }
 
 .portfolio-title{
     position: relative;    
+    margin-bottom: 100px;
 }
 
 .portfolio-title h1{
     color: white;
     font-weight: 800;
     line-height: 40px;
+    font-size: 60px;
 
 }
 
@@ -489,6 +497,7 @@ body{
     opacity: 1;
 }
 
+
 /* Next & previous buttons */
 .prev, .next {
     cursor: pointer;
@@ -552,75 +561,142 @@ body{
     align-items: center;
     flex-direction: column;
     background: #212121;
+
 }
 
 .contatti-title{
     line-height: 10px;
-    width: fit-content;
+    width: fit-content;  
+    margin-bottom: 100px;
 }
 
 .contatti-title h1{
     color: #fff;
     font-weight: 800;
-
-
+    font-size: 60px;
 }
 
 .contatti-title span{
-    height: 5px;
-    width: 100px;
-    background: #3F16E0;
     display: block;
+    height: 5px;
+    width: 50%;
+    background-color: #2B0F99;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    border-radius: 5px;
+    border-radius: 10px;
+    
 }
 
 .form-contatti{
-    margin-top: 50px;
-    width: fit-content;
+    width:  50%;
 }
 .form-row-contatti{
+    position: relative;
+    width: 100%;
     display: flex;
-    justify-content: center;
+    margin-bottom: 40px;
 }
-.form-row-contatti input{
-    margin: 10px !important;
-    width: 300px !important;
-    height: 50px !important;
-    font-size: 17px !important;
-    padding: 10px !important;
-    color: #bfbfba !important;
 
+.form-row-contatti input{
+    width: 50%;
+    border: none;
+    border-bottom: 1px solid #5e5a5c;
+    height: 50px;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .form-row-contatti input:focus{
-    outline: none;
-    border-bottom: #3F16E0 !important;
-    box-shadow: 0 1px 0 0 #3F16E0 !important;
-    
+    border-bottom: 2px solid #3F16E0;
 }
-.form-row-contatti input:active{
-    outline: none;
 
-} 
+.form-name{
+    position: absolute;
+    top:  0;
+    left:  20px;
+    padding: 10px 0;
+    color: #5e5a5c;
+    pointer-events: none;
+    transition: .5s;
+}
+
+#nome:focus ~ .form-name,
+#nome:valid ~ .form-name {
+    top: -20px;
+    left: 20px;
+}
+
+.form-surname{
+    position: absolute;
+    top:  0;
+    left:  calc(50% + 20px);
+    padding: 10px 0;
+    color: #5e5a5c;
+    pointer-events: none;
+    transition: .5s;
+}
+
+#cognome:focus ~ .form-surname,
+#cognome:valid ~ .form-surname {
+    top: -20px;
+    left: calc(50% + 20px);
+}
+
+.form-email{
+    position: absolute;
+    top:  0;
+    left:  20px;
+    padding: 10px 0;
+    color: #5e5a5c;
+    pointer-events: none;
+    transition: .5s;
+}
+
+#email:focus ~ .form-email,
+#email:valid ~ .form-email {
+    top: -20px;
+    left: 20px;
+}
+
+.form-tel{
+    position: absolute;
+    top:  0;
+    left:  calc(50% + 20px);
+    padding: 10px 0;
+    color: #5e5a5c;
+    pointer-events: none;
+    transition: .5s;
+}
+
+#tel:focus ~ .form-tel,
+#tel:valid ~ .form-tel  {
+    top: -20px;
+    left: calc(50% + 20px);
+}
+
 .form-row-contatti textarea{
+    background: transparent;
+    outline: none;
+    border: 1px solid #5e5a5c;
+    transition: .5s;
     resize: none;
     width: 100%;
-    font-size: 17px;
-    margin: 10px;
-    color: #bfbfba !important;
-    border: #3F16E0 !important;
-    height: 100px !important;
+    color: #fff;
+    font-size: 20px;
 }
 
 .form-row-contatti textarea:focus{
-    outline: none;
-    
+    border: 1px solid #3F16E0;
 }
-.form-row-contatti textarea:active{
-    outline: none;
+
+.form-row-contatti textarea::placeholder{
+    color: #5e5a5c;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
 }
 
 .form-contatti-button{
